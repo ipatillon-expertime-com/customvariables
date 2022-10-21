@@ -4,6 +4,10 @@ Tree of project :
 ```
 ├── environments
 │   └── prd
+│   │   └── resources.csv
+│   └── int
+│   │   └── resources.csv
+│   └── dev
 │       └── resources.csv
 ├── get_variables.sh
 ├── main.tf
