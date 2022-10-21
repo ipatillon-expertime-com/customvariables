@@ -4,6 +4,6 @@ module "global" {
   source = "./modules/global"
 }
 
-output "out1" {
+output "naming" {
     value = module.global.naming
 }
