@@ -2,13 +2,6 @@ Initialize Terraform object names with CSV values
 
 Tree of project :
 ```
-├── environments
-│   └── prd
-│   │   └── resources.csv
-│   └── int
-│   │   └── resources.csv
-│   └── dev
-│       └── resources.csv
 ├── get_variables.sh
 ├── main.tf
 ├── modules
@@ -16,6 +9,14 @@ Tree of project :
 │       └── main.tf
 └── templates
     └── sample.tf.source
+└── environments
+    └── prd
+    │   └── resources.csv
+    └── int
+    │   └── resources.csv
+    └── dev
+        └── resources.csv
+ 
 ```
 
 CSV files must be in those folders : environments/xxx/resources.csv  (xxx values are prd, dev, int, uat, etc...)
