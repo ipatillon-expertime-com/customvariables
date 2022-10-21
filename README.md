@@ -53,4 +53,4 @@ Changes to Outputs:
 
 Values staying with DEFAULT in the name = parameter not set in CSV file
 
-Hwo to use : In other modules, use global.naming.sqlserver1 for example to get the name "sql-pp-dbi-1"
+How to use in Terraform: In other modules, use global.naming.sqlserver1 for example to get the name "sql-pp-dbi-1"
