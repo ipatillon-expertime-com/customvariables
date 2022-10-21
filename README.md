@@ -35,6 +35,7 @@ storeabcd1234, azstoipalog1
 ```
 
 1) Launch ./get_variables.sh -e [--environment] prd|uat|dev|int
+2) 
 this copy the sample.tf.source into main.tf in the global folder and changes variables values
 2) terraform init
 3) terraform plan
