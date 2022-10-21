@@ -34,13 +34,14 @@ storeabcd1234, azstoipalog1
 3) terraform plan
 
 Sample output :
-
+```
 Changes to Outputs:
   + out1 = {
       + sqlserver1    = "sql-pp-dbi-1"
       + storeabcd1234 = "azstoipalog1"
       + webapp01      = "DEFAULTwebapp01"
     }
+```
 
 Values staying with DEFAULT in the name = parameter not set in CSV file
 
