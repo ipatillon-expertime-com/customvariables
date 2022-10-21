@@ -20,13 +20,14 @@ CSV File Format :
 - First column = terraform object name
 - Second column = azure object name
 
-Sample CSV File : cat environments/prd/resources.csv
+Sample CSV File : 
+```
+cat environments/prd/resources.csv
 
 local_name, resource_name
-
 sqlserver1, sql-pp-dbi-1
-
 storeabcd1234, azstoipalog1
+```
 
 1) Launch ./get_variables.sh -e [--environment] prd|uat|dev|int
 2) terraform init
