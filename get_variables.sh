@@ -48,18 +48,28 @@ fi
 # do the replace in the terraform file
 # f0 : Terraform local name
 # f1 : Azure resource name
+
+# separator
 IFS=","
+
+# read the fields
 while read -r -a fields
 do
+    # TRIM first field
     export f0=$(echo "${fields[0]}" | sed -e 's/^[ \t]*//;s/[ \t]*$//')
+    # TRIM second field
     export f1=$(echo "${fields[1]}" | sed -e 's/^[ \t]*//;s/[ \t]*$//')
+    
+    # if we are not first line and getting a field name
     if [ $f0 != "" -a $f0 != "local_name" ]
       then
+        # change Azure resource Name into dstFile
         sed -i "s/DEFAULT$f0/$f1/" $dstFile
     fi
+# read from the CSV file
 done < environments/$evt/resources.csv
 
-# search if there still some DEFAULT name
+# search if there still some DEFAULT name in dstFile
 export notDone=$(grep 'DEFAULT' $dstFile | wc -l)
 
 # if there are : signal them
