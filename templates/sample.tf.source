@@ -2,7 +2,7 @@
 output "naming" {
     value = {
         sqlserver1 			= "DEFAULTsqlserver1"
-        storeabcd1234 			= "DEFAULTstoreabcd1234"
+        store1 			    = "DEFAULTstore1"
         webapp01			= "DEFAULTwebapp01"
     }
 }
