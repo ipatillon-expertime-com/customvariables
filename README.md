@@ -8,7 +8,7 @@ Tree of project :
 │   └── global
 │       └── main.tf
 └── templates
-    └── sample.tf.source
+│   └── sample.tf.source
 └── environments
     └── prd
     │   └── resources.csv
