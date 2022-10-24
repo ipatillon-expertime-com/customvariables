@@ -10,9 +10,9 @@ Tree of project :
 ├── templates
 │   └── sample.tf.source
 └── environments
-    └── prd
+    ├── prd
     │   └── resources.csv
-    └── int
+    ├── int
     │   └── resources.csv
     └── dev
         └── resources.csv
