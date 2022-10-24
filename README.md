@@ -7,7 +7,7 @@ Tree of project :
 ├── modules
 │   └── global
 │       └── main.tf
-└── templates
+├── templates
 │   └── sample.tf.source
 └── environments
     └── prd
