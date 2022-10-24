@@ -44,7 +44,7 @@ else
     exit 2
 fi
 
-# read from CSV file and TRIM the parts separeted by ","
+# read from CSV file and TRIM the parts separated by ","
 # do the replace in the terraform file
 # f0 : Terraform local name
 # f1 : Azure resource name
