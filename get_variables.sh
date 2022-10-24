@@ -14,7 +14,7 @@ while  [ -n "$1" ]
 do
     case "$1" in
         --environment) export evt=$2;;
-        -e) export export evt=$2;;
+        -e) export evt=$2;;
     esac
     shift
 done
