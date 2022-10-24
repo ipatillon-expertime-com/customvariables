@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# echo command line to help
 if [ $# -ne 2 ]
   then
     echo "Bad arguments supplied !"
@@ -7,9 +8,11 @@ if [ $# -ne 2 ]
     exit 2
 fi
 
+# init vars (environment and destination_file_name)
 export evt=""
 export dstFile="modules/global/main.tf"
 
+# check parameters
 while  [ -n "$1" ]
 do
     case "$1" in
@@ -19,6 +22,8 @@ do
     shift
 done
 
+# if bad parameters
+# echo command line to help
 if [ "$evt" == "" ]
   then
     echo "Bad arguments supplied !"
@@ -29,6 +34,8 @@ fi
 echo "Working in the $evt environment"
 export srcFile="environments/$evt/resources.csv"
 
+# test
+# if CSV source file exists then copy terraform template
 if [ -f $srcFile ]
 then
     cp templates/sample.tf.source $dstFile
@@ -37,6 +44,10 @@ else
     exit 2
 fi
 
+# read from CSV file and TRIM the parts separeted by ","
+# do the replace in the terraform file
+# f0 : Terraform local name
+# f1 : Azure resource name
 IFS=","
 while read -r -a fields
 do
@@ -48,8 +59,10 @@ do
     fi
 done < environments/$evt/resources.csv
 
+# search if there still some DEFAULT name
 export notDone=$(grep 'DEFAULT' $dstFile | wc -l)
 
+# if there are : signal them
 if [ $notDone != 0 ]
   then
     echo "Some Variables are missing from CSV !"
