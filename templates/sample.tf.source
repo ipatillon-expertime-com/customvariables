@@ -1,8 +1,8 @@
 
 output "naming" {
     value = {
-        sqlserver1 			= "DEFAULTsqlserver1"
-        store1 			    = "DEFAULTstore1"
+        sqlserver1			= "DEFAULTsqlserver1"
+        store1				= "DEFAULTstore1"
         webapp01			= "DEFAULTwebapp01"
     }
 }
