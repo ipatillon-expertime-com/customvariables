@@ -31,7 +31,7 @@ cat environments/prd/resources.csv
 
 local_name, resource_name
 sqlserver1, sql-pp-db-1
-storeabcd1234, azstoipalog1
+store1, stojpaduxe34561
 ```
 
 1) Launch ./get_variables.sh -e [--environment] prd|uat|dev|int
@@ -46,7 +46,7 @@ Sample output :
 Changes to Outputs:
   + naming = {
       + sqlserver1    = "sql-pp-db-1"
-      + storeabcd1234 = "azstoipalog1"
+      + store1        = "stojpaduxe34561"
       + webapp01      = "DEFAULTwebapp01"
     }
 ```
